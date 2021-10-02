@@ -1,3 +1,5 @@
+"use strict";
+
 let numberOfFilms;
 
 function start() {
@@ -13,27 +15,35 @@ start();
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
-    actors: {}, 
+    actors: {},
     genres: [],
-    privat: false
+    private: false
 };
 
+function writeYourGenres() {
+    for(let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i -1] = genre;
+    }
+}
 
 function rememberMyFilms() {
-    for (let i = 0; i < 2; i++){
-        const a = prompt("Один из последних просмотренных фильмов?", ""), 
-              b = prompt("Оценка?", "");
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Один из последних просмотренных фильмов?", ""),
+            b = prompt("Оценка?", "");
     
-        if (a != null && a !="" && b != null && a.length < 50) {
-            personalMovieDB.movies[a] = b;    
-            } else {
+        if (a != null && a != "" && b != null && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+        } else {
             console.log("error");
             i--;
-        }  
+        }
     }
 }
 
 rememberMyFilms();
+
+writeYourGenres();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
@@ -49,18 +59,22 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
+// function showMyDB() {
+// if(personalMovieDB.private == false) {
+//     console.log(personalMovieDB);
+// } else {
+//     console.log("DB is locked.");
+// }
+// }
+
+//ANOTHER WAY
+
 function showMyDB(hidden) {
-    if (!hidden) {
+    if(!hidden) {
         console.log(personalMovieDB);
+    } else {
+        console.log("DB is Hidden");
     }
 }
 
-showMyDB(personalMovieDB.privat);
-
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-         personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
-    }
-}
-
-writeYourGenres();
+showMyDB(personalMovieDB.private);
