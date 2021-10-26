@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+body {
+    /* padding-top: 250px; */
+    /* width: 100%; */
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+h2 {
+
+    font-size: 4em;
+    line-height: 0.95em;
+    letter-spacing:0em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+ol {
+    font-size: 1.2em;
+    list-style-type: decimal-leading-zero;
+}
+
+ul {
+    font-size: 1.2em;
+    list-style: none;
+}
+
+.div-designer-name {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 300px;
+align-items: flex-end;
+margin-bottom: 200px;
+
+}
+
+.designer-name-left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.designer-name-right-side {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.9em;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.portfolio-toggle-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-mockups {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.single-mockup {
+    
+}
+
+ .grey-square-45{
+    background-color: #E4E4E4;
+    height: 300px;
+    width: 30%;
+}
+
+.grey-square-100 {
+    background-color: #E4E4E4;
+    height: 300px;
+    width: 100%;
+}
